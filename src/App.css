@@ -60,7 +60,7 @@
 .form__input{
   width:280px;
   height:40px;
-  border-radius: 1px;
+  border-radius: 3px;
 }
 .error__container{
   display: flex;

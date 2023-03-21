@@ -39,26 +39,21 @@ function LoginForm() {
         layout="vertical"
       >
         <FormItem
-          label="Email address"
+          label={<label className="form__input_label">Email address</label>}
           name="username"
-          rules={[
-            {
-              required: true,
-              message: "This does not look like email , try again ",
-            },
-          ]}
+          
         >
           <Input className="form__input" placeholder="Email address" />
         </FormItem>
 
         <FormItem
-          label="Password"
+          label={<label className="form__input_label">Password</label>}
           name="password"
-          rules={[{ required: true, message: <Error field="password" /> }]}
+          rules={[{ required: true, message: <Error field="Password" /> }]}
         >
-          <Input.Password className="form__input" placeholder="password" />
+          <Input.Password className="form__input" placeholder="Password" />
         </FormItem>
-        <FormItem className="form-text">Forgot your password?</FormItem>
+        <FormItem className="form__text">Forgot your password?</FormItem>
         <FormItem>
           <Button
             onClick={handleFormSubmit}

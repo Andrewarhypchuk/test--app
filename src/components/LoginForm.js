@@ -48,7 +48,7 @@ function LoginForm() {
             },
           ]}
         >
-          <Input className="form-input" placeholder="Email address" />
+          <Input className="form__input" placeholder="Email address" />
         </FormItem>
 
         <FormItem
@@ -56,13 +56,13 @@ function LoginForm() {
           name="password"
           rules={[{ required: true, message: <Error field="password" /> }]}
         >
-          <Input.Password className="form-input" placeholder="password" />
+          <Input.Password className="form__input" placeholder="password" />
         </FormItem>
         <FormItem className="form-text">Forgot your password?</FormItem>
         <FormItem>
           <Button
             onClick={handleFormSubmit}
-            className="submit-button"
+            className="submit__button"
             type="primary"
             htmlType="submit"
           >

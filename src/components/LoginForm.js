@@ -1,12 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { Button, Form, Input } from "antd";
+import React, { useEffect } from "react";
+import { Button, Form, Input , notification } from "antd";
 import Error from "./Error";
-import Notification from "./Notification";
 import FormItem from "antd/es/form/FormItem";
 
 function LoginForm() {
-  const [errorLogin, setErrorLogin] = useState(false);
   const [form] = Form.useForm();
+  const [api, contextHolder] = notification.useNotification();
+  const openNotification = (placement) => {
+    api.info({
+
+      description:'Please correct the form and try again',
+      placement:'bottom',
+      className: 'notification__container',
+      duration:100
+    });
+  };
 
   useEffect(() => {
     form.setFieldsValue({
@@ -19,10 +27,11 @@ function LoginForm() {
     form
       .validateFields()
       .then(() => {
-        setErrorLogin(false);
+        
       })
       .catch(() => {
-        setErrorLogin(true);
+        
+        openNotification('bottom')
       });
   };
 
@@ -71,8 +80,7 @@ function LoginForm() {
         </div>
         <div className="info__container_text">Contact us</div>
       </div>
-
-      {errorLogin ? <Notification /> : <></>}
+      {contextHolder }
     </div>
   );
 }

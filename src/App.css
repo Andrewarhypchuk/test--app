@@ -75,6 +75,9 @@
 .ant-form-item{
   margin-bottom: 0px !important;
 }
+.ant-form-item-required::before{
+  display: none !important;
+}
 .form__input_label{
   font-style: normal;
 font-weight: 400;

@@ -51,9 +51,9 @@ function LoginForm() {
           name="password"
           rules={[{ required: true, message: <Error field="Password" /> }]}
         >
-          <Input.Password className="form__input" placeholder="Password" />
+          <Input.Password className="form__input input_last" placeholder="Password" />
         </FormItem>
-        <FormItem className="form__text">Forgot your password?</FormItem>
+        <div className="form__text">Forgot your password?</div>
         <FormItem>
           <Button
             onClick={handleFormSubmit}

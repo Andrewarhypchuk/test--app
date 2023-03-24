@@ -4,9 +4,9 @@ import HelpIcon from "../assets/img/help-icon.svg";
 function Header() {
   return (
     <div className="header__container">
-      <img className="header__container_logoImg" src={Logo} alt="logo" />
+      <img className="header__container_logo-img" src={Logo} alt="logo" />
       <a>
-        <img className="header__container_HelpImg" src={HelpIcon} alt="help" />
+        <img className="header__container_help-img" src={HelpIcon} alt="help" />
       </a>
     </div>
   );

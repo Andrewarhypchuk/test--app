@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import 'antd/dist/reset.css';
 import LoginForm from './components/LoginForm'
 import Header from './components/Header';

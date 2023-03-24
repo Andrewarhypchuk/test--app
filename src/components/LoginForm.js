@@ -8,11 +8,10 @@ function LoginForm() {
   const [api, contextHolder] = notification.useNotification();
   const openNotification = (placement) => {
     api.info({
-
       description:'Please correct the form and try again',
       placement:'bottom',
       className: 'notification__container',
-      duration:100
+      duration:3
     });
   };
 
@@ -26,11 +25,9 @@ function LoginForm() {
   const handleFormSubmit = () => {
     form
       .validateFields()
-      .then(() => {
-        
+      .then(() => { 
       })
       .catch(() => {
-        
         openNotification('bottom')
       });
   };
@@ -49,12 +46,10 @@ function LoginForm() {
       >
         <FormItem
           label={<label className="form__input_label">Email address</label>}
-          name="username"
-          
+          name="username" 
         >
           <Input className="form__input" placeholder="Email address" />
         </FormItem>
-
         <FormItem
           label={<label className="form__input_label">Password</label>}
           name="password"

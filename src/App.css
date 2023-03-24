@@ -3,10 +3,13 @@
   font-family: "NeueHaasUnicaMedium";
   src: url('./assets/fonts/font.woff2') format('woff2');
 }
+#root{
+  height:100%;
+}
 .App {
   background-color: black;
   text-align: center;
-  height:809px;
+  height:100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -41,8 +44,9 @@
   flex-direction: column;
   background-image: url(./assets/img/background-img.png);
   background-size: cover;
-  background-position: right 0% top 3%;;
-  height:733px;
+  background-position: right 0% top 3%;
+  height:100%;
+  min-height:733px;
   width: 100%;
   overflow: hidden;
   border-radius: 10px;

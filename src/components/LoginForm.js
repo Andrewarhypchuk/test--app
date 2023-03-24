@@ -11,7 +11,7 @@ function LoginForm() {
       description:'Please correct the form and try again',
       placement:'bottom',
       className: 'notification__container',
-      duration:3
+      duration:30
     });
   };
 
